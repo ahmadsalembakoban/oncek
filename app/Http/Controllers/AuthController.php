@@ -24,11 +24,13 @@ class AuthController extends Controller
 	// return redirect('/login');
 	// return 'hello';
     
-        if(!Auth::attempt(['name' => $request->name, 'password' => $request->password])) {
-            return redirect()->back();
-        }
+        // if(!C) {
+        //     return redirect()->back();
+        // }
 
-        return redirect('/dashboard');
+        // return redirect('/dashboard');
+
+        dd(\Auth::attempt(['name' => $request->name, 'password' => $request->password]));
     }
 
     public function logout() {
