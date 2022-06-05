@@ -20,7 +20,8 @@ class AuthController extends Controller
             return redirect('/dashboard');
             
         }
-        return redirect('/login');  
+	// return redirect('/login');
+	return 'hello';  
     }
 
     public function logout() {
