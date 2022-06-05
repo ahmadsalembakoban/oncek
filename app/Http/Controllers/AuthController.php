@@ -15,24 +15,13 @@ class AuthController extends Controller
         return view('auths.login');
     }
 
-    public function postlogin(Request $request) {
+    public function postlogin() {
 
-        // if(Auth::attempt($request->only('name', 'password'))) {
-        //     return redirect('/dashboard');
+        if(Auth::attempt($request->only('name', 'password'))) {
+            return redirect('/dashboard');
             
-        // }
-	// return redirect('/login');
-	// return 'hello';
-    
-        // if(!Auth::attempt(['name' => $request->name, 'password' => $request->password])) {
-        //     return redirect()->back();
-        // }
-
-        // return redirect('/dashboard');
-
-        // dd(\Auth::attempt(['name' => $request->name, 'password' => $request->password]));
-        return view('dashboards.index');
-        
+        }
+        return redirect('/login');
     }
 
     public function logout() {
