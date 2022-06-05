@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 
 Route::get('/login', 'AuthController@login')->name('login');
+// Route::get('/login', 'AuthController@login');
 // Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/postlogin', 'AuthController@postlogin');
 Route::get('/logout', 'AuthController@logout');
