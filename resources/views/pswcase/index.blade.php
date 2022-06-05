@@ -16,16 +16,6 @@
                         @endif
                     <!--  -->
                     <div class="col-md-12">
-                        <!-- alert -->  
-                        <!-- @if(session('sukses'))
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                {{session('sukses')}}
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        @endif -->
-                        <!--  -->
                         <div class="panel">
                             <div class="panel-heading">
                                  <form class="form-inline my-2 my-lg-0" method="GET" action="/pswcase">
@@ -151,7 +141,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Action</label>
-                            <input type="text" name="psw_action" class="form-control" >
+                            <textarea class="form-control" name="psw_action" rows="5"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="">Info</label>
