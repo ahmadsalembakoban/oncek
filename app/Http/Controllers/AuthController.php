@@ -15,8 +15,6 @@ class AuthController extends Controller
     }
 
     public function postlogin(Request $request) {
-        
-        // dd($request->all());
 
         if(Auth::attempt($request->only('name', 'password'))) {
             return redirect('/dashboard');
