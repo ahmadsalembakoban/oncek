@@ -8,14 +8,20 @@ use App\Models\Pswcase;
 class PswcaseController extends Controller
 {
     public function index(Request $request) {
-        
-        // dd($request->all());
+
         if($request->has('cari')) {
             $data_pswcase = Pswcase::where('psw_problem',  'LIKE', '%'.$request->cari.'%')->get();
-        } else {
+        } 
+        else if($request->has('cari2')) {
+            $data_pswcase = Pswcase::where('psw_action', 'LIKE', '%'.$request->cari2.'%')->get();
+        } 
+        else if($request->has('cari3')) {
+            $data_pswcase = Pswcase::where('info', 'LIKE', '%'.$request->cari3.'%')->get();
+        }
+        else {
             $data_pswcase = Pswcase::all();     
         }
-        
+
         return view('pswcase.index', ['data_pswcase' => $data_pswcase]);
     }
 
