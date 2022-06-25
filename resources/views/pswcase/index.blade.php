@@ -21,14 +21,14 @@
                                 <div class="navbar-right">
                                     <button type="button" class="" data-toggle="modal" data-target="#exampleModal"> Add <span class="lnr lnr-plus-circle"></span></button>
                                 </div>
-                                 <form class="form-inline my-2 my-lg-0" method="GET" action="/pswcase">
-                                    <input class="form-control mr-sm-2" name="cari" type="search" placeholder="Search" aria-label="Search">
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin: 10px; background: #7c69ef; color: #fff;padding: 6.5px;">Search Case</button>
-                                    <input class="form-control mr-sm-2" name="cari2" type="search2" placeholder="Search" aria-label="Search">
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin: 10px; background: #7c69ef; color: #fff;padding: 6.5px;">Search Action</button>
-                                    <input class="form-control mr-sm-2" name="cari3" type="search3" placeholder="Search" aria-label="Search">
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin: 10px; background: #7c69ef; color: #fff;padding: 6.5px;">Search Info</button>
-                                </form>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <form class="form-inline my-2 my-lg-0" method="GET" action="/pswcase">
+                                            <input class="form-control mr-sm-2" name="cari" type="search" placeholder="Search" aria-label="Search">
+                                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin: 10px; background: #7c69ef; color: #fff;padding: 6.5px;">Search Case</button>
+                                        </form>
+                                    </div>
+                                </div>
                                 <!-- dropdown search -->
                                 <!-- <form action="/pswcase" class="form-inline my-2 my-lg-0" method="GET">
                                     <input class="form-control mr-sm-2" name="cari" type="search" placeholder="Search" aria-label="Search" style="margin-bottom: 8px;">
@@ -118,7 +118,7 @@
                                 
                             </div>
                             <div class="panel-body">
-                                <table class="table table-hover">
+                                <table class="table table-hover" id="search_list">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -146,5 +146,7 @@
             </div>
         </div>
     </div>
+
+    
 @stop
 
