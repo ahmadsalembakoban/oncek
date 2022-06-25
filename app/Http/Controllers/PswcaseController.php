@@ -18,8 +18,6 @@ class PswcaseController extends Controller
             $data_pswcase = Pswcase::all();     
         }
 
-        
-
         return view('pswcase.index', ['data_pswcase' => $data_pswcase]);
     }
 

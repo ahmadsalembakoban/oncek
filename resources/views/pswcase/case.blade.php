@@ -6,7 +6,6 @@
 			<div class="main-content">
 				<div class="container-fluid">
 					<div class="row">
-                        <a href="/pswcase" class="btn btn-primary btn-sm"> Back</a>
 						<div class="col-md-10">
 							<!-- PANEL HEADLINE -->
 							<div class="panel panel-headline" style="text-transform: capitalize;">
@@ -21,8 +20,9 @@
 								</div>
 							</div>
 							<!-- END PANEL HEADLINE -->
-						</div>
-					</div>  
+						</div>					
+					</div> 
+					<a href="/pswcase" class="btn btn-primary btn-sm"> Back</a> 
 				</div>
 			</div>
 			<!-- END MAIN CONTENT -->

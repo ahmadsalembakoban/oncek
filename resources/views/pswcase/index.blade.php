@@ -29,21 +29,9 @@
                                         </form>
                                     </div>
                                 </div>
-                                <!-- dropdown search -->
-                                <!-- <form action="/pswcase" class="form-inline my-2 my-lg-0" method="GET">
-                                    <input class="form-control mr-sm-2" name="cari" type="search" placeholder="Search" aria-label="Search" style="margin-bottom: 8px;">
-                                    <select class="form-control input-md  m-4" id="distance" class="distance" data-dependent="state" style="margin-bottom: 8px;">
-										<option value="case" name="case">Case</option>
-                                        <option value="action" name="cari2">Action</option>
-                                        <option value="info" name="cari3">Info</option>
-									</select>
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin: 10px; background: #7c69ef; color: #fff;padding: 6.5px;">Search</button>
-                                </form> -->
                                 <!--  -->
-                                <!-- <div class="right">
-                                    <button type="button" class="right" data-toggle="modal" data-target="#exampleModal"><span class="lnr lnr-plus-circle"></span></button>
-                                </div> -->
-                                <!-- Modal -->
+
+                                <!-- modal -->
                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -85,37 +73,7 @@
                                     </div>
                                 </div>
                                 <!-- end modal -->
-                                <!-- modal2 -->
-                                <!-- <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel"></h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>  
-                                            <div class="modal-body" >
-                                                <form action="/pswcase" method="">
-                                                    <div class="form-group">
-                                                        <label for="">Problem</label>
-                                                        <input type="text" name="psw_problem" class="form-control" value="" >
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="">Action</label>
-                                                        <textarea class="form-control" name="psw_action" rows="8"></textarea>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="">Info</label>
-                                                        <textarea class="form-control" name="info" rows="4"></textarea>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>  
-                                    </div>
-                                </div> -->
-                                <!-- endmodal2 -->
-                                
+
                             </div>
                             <div class="panel-body">
                                 <table class="table table-hover" id="search_list">
@@ -140,6 +98,7 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <!--  -->
                         </div>
                     </div>
                 </div>
