@@ -97,6 +97,8 @@
                                         @endforeach  
                                     </tbody>
                                 </table>
+
+                                <span>{{$data_pswcase->links()}}</span>
                             </div>
                             <!--  -->
                         </div>

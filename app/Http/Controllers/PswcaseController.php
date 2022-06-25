@@ -15,7 +15,8 @@ class PswcaseController extends Controller
                                     ->orwhere('info',  'LIKE', '%'.$request->cari.'%')
                                     ->get();
         } else {
-            $data_pswcase = Pswcase::all();     
+            // $data_pswcase = Pswcase::all();
+            $data_pswcase = Pswcase::paginate(4);     
         }
 
         return view('pswcase.index', ['data_pswcase' => $data_pswcase]);
