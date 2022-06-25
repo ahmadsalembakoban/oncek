@@ -85,6 +85,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @if(!empty($data_pswcase) && $data_pswcase->count())
                                         @foreach ($data_pswcase as $num => $pswc) 
                                         <tr class="align-right"> 
                                             <td>{{++$num}}</td>     
@@ -94,7 +95,12 @@
                                                 <a href="/pswcase/{{$pswc->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('data delete?') ">Delete</a>
                                             </td>
                                         </tr>    
-                                        @endforeach  
+                                        @endforeach
+                                    @else
+                                        <tr>
+                                            <td colspan="10">No Data</td>
+                                        </tr>
+                                    @endif  
                                     </tbody>
                                 </table>
 
