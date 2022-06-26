@@ -85,27 +85,22 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    @if(!empty($data_pswcase) && $data_pswcase->count())
-                                        @foreach ($data_pswcase as $num => $pswc) 
-                                        <tr class="align-right"> 
-                                            <td>{{++$num}}</td>     
-                                            <td><a href="/pswcase/{{$pswc->id}}/case">{{$pswc->psw_problem}}</a></td>
-                                            <td>
-                                                <a href="/pswcase/{{$pswc->id}}/edit" class="btn btn-sm btn-dark">Edit</a>
-                                                <a href="/pswcase/{{$pswc->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('data delete?') ">Delete</a>
-                                            </td>
-                                        </tr>    
-                                        @endforeach
-                                    @else
-                                        <tr>
-                                            <td colspan="10">No Data</td>
-                                        </tr>
-                                    @endif  
+                                        @if(count($data_pswcase) > 0)
+                                            @foreach ($data_pswcase ?? '' as $num => $pswc) 
+                                            <tr class="align-right"> 
+                                                <td>{{++$num}}</td>     
+                                                <td><a href="/pswcase/{{$pswc->id}}/case">{{$pswc->psw_problem}}</a></td>
+                                                <td>
+                                                    <a href="/pswcase/{{$pswc->id}}/edit" class="btn btn-sm btn-dark">Edit</a>
+                                                    <a href="/pswcase/{{$pswc->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('data delete?') ">Delete</a>
+                                                </td>
+                                            </tr>    
+                                            @endforeach
+                                        @else 
+                                        <tr><td>Not Found</td></tr>    
+                                        @endif
                                     </tbody>
                                 </table>
-
-                                <span>{{$data_pswcase->links()}}</span>
-                            </div>
                             <!--  -->
                         </div>
                     </div>
