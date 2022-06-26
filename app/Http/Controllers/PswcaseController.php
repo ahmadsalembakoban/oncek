@@ -15,24 +15,11 @@ class PswcaseController extends Controller
                                     ->orwhere('psw_action',  'LIKE', '%'.$request->cari.'%')
                                     ->orwhere('info',  'LIKE', '%'.$request->cari.'%')
                                     ->paginate(3);
-        return view('pswcase.index', ['data_pswcase' => $data_pswcase]);
         } else {
             $data_pswcase = Pswcase::all();     
         }
         
-        
-
-        // sample 
-        // if(isset($_GET['cari'])) {
-        //     $search_text = $_GET['cari'];
-        //     $data_pswcase = Pswcase::where('psw_problem', 'LIKE', '%'.$search_text.'%')
-        //                              ->orwhere('psw_action', 'LIKE', '%'.$search_text.'%')
-        //                              ->orwhere('info', 'LIKE','%'.$search_text.'%')
-        //                              ->paginate(5);
-        //     return view('pswcase.index', ['data_pswcase' => $data_pswcase]);
-        // } else {
-        //     return view('pswcase.index');
-        // }
+        return view('pswcase.index', ['data_pswcase' => $data_pswcase]);
     }
 
     public function create(Request $request) {
