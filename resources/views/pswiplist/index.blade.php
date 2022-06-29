@@ -5,35 +5,19 @@
         <div class="main-content">
             <div class="container-fluid">
                 <div class="row">
-                    <!-- alert -->  
-                        
+                    <!-- alert -->      
                     <!--  -->
-                    <div class="col-md-12">
-                        <div class="panel">
-                            <div class="row">
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <div class="caption">
-                                           <h4>Ip Middleware Prowswitching</h4> 
-                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex dolorum at cum, suscipit, recusandae neque laboriosam nesciunt totam accusantium mollitia dolores veniam atque?</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--  -->
-                                <div class="row">
-                                    <div class="col-sm-6 col-md-4">
-                                        <div class="thumbnail">
-                                        <img src="">
-                                        <div class="caption">
-                                            <h3>Thumbnail label</h3>
-                                            <p>...</p>
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--  -->
-                            </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                           <div class="col-md-3" style="border: solid 1px red;">
+                                <form class="form-inline my-2 my-lg-0" method="GET" action="/pswcase">
+                                    <input class="form-control mr-sm-1" name="cari" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin: 10px; background: #7c69ef; color: #fff;padding: 6.5px;">Search IP</button>
+                                </form>
+                           </div>
+                        </div>
+                        <div class="panel-body">
+
                         </div>
                     </div>
                 </div>

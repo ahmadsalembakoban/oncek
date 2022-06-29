@@ -14,7 +14,7 @@ class PswcaseController extends Controller
             $data_pswcase = Pswcase::where('psw_problem',  'LIKE', '%'.$request->cari.'%')
                                     ->orwhere('psw_action',  'LIKE', '%'.$request->cari.'%')
                                     ->orwhere('info',  'LIKE', '%'.$request->cari.'%')
-                                    ->paginate(3);
+                                    ->get();
         } else {
             $data_pswcase = Pswcase::all();     
         }
