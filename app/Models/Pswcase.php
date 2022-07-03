@@ -10,6 +10,6 @@ class Pswcase extends Model
     use HasFactory;
 
     protected $table = 'pswcase';
-    protected $fillable = ['psw_problem', 'psw_action', 'info'];
+    protected $fillable = ['psw_problem', 'psw_action', 'info', 'created_at'];
     protected $date = ['created_at'];
 }

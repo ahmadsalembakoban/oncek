@@ -32,6 +32,10 @@
                                         <label for="">Info</label>
                                         <textarea class="form-control" name="info" rows="5">{{ $data_pswcase->info }}</textarea>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="">Date</label>
+                                        <input type="date" name="psw_date" class="form-control" value="{{ $data_pswcase->created_at }}" >
+                                    </div>
                                         <button type="submit" class="" style="background:#7c69ef; color: #fff;padding: 6.5px; margin: 8px;"> Save</button>
                                         <a href="/pswcase/" class="btn btn-dark"> Cancel</a>
                                 </form>

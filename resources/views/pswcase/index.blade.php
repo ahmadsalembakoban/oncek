@@ -91,7 +91,7 @@
                                             <tr class="align-right"> 
                                                 <td>{{++$num}}</td>     
                                                 <td><a href="/pswcase/{{$pswc->id}}/case">{{$pswc->psw_problem}}</a></td>
-                                                <td>{{date('d F, Y', strtotime($pswc->created_at)) }}</td>
+                                                <td>{{$pswc->created_at }}</td>
                                                 <td>
                                                     <a href="/pswcase/{{$pswc->id}}/edit" class="btn btn-sm btn-dark" style="margin-bottom: 5px;">Edit</a>
                                                     <a href="/pswcase/{{$pswc->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('data delete?') " style="margin-bottom: 5px;">Delete</a>
