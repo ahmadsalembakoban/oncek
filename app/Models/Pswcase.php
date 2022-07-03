@@ -11,4 +11,5 @@ class Pswcase extends Model
 
     protected $table = 'pswcase';
     protected $fillable = ['psw_problem', 'psw_action', 'info'];
+    protected $date = ['created_at'];
 }

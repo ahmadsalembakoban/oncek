@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pswcase;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class PswcaseController extends Controller
 {
     public function index(Request $request) {
+        $data_pswcase = DB::table('pswcase')->paginate(3);
 
         if($request->has('cari')) {
             $data_pswcase = Pswcase::where('psw_problem',  'LIKE', '%'.$request->cari.'%')
@@ -16,10 +18,12 @@ class PswcaseController extends Controller
                                     ->orwhere('info',  'LIKE', '%'.$request->cari.'%')
                                     ->get();
         } else {
-            $data_pswcase = Pswcase::all();     
+            // $data_pswcase = Pswcase::all();
+            $data_pswcase = DB::table('pswcase')->paginate(3);     
         }
         
         return view('pswcase.index', ['data_pswcase' => $data_pswcase]);
+        // return view('pswcase.index', ['data_pswcase' => Pswcase::simplePaginate(3)]);
     }
 
     public function create(Request $request) {
