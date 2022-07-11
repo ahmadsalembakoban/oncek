@@ -22,8 +22,37 @@ class PswiplistController extends Controller
             $data_pswip = DB::table('iplist')->paginate(3);
         }
 
-        return view('pswiplist.index', ['data_pswip'=> $data_pswip]);
-
+        return view('pswiplist.index', ['data_pswip' => $data_pswip]); 
     } 
+
+
+    public function create(Request $request) {
+        $this->validate($request, [
+            'psw_servername' => 'required | min: 2',
+            'psw_ip' => 'required | min: 1'
+        ]);
+        
+        Iplist::create($request->all());
+
+        return redirect('/pswiplist')->with('sukses', 'Data Added!');
+    }
+
+    public function edit($id) {
+        $data_pswip = Iplist::find($id);
+        return view('pswiplist.edit', ['data_pswip' => $data_pswip]);
+    }
+
+
+    public function update(Request $request, $id) {
+        $data_pswip = Iplist::find($id);
+        $data_pswip->update($request->all());
+        return redirect('/pswiplist')->with('sukses', 'Data Updated');
+    }
+
+    public function delete($id) {
+        $data_pswip = Iplist::find($id);
+        $data_pswip->delete();
+        return redirect('/pswiplist')->with('sukses', 'Data Deleted');
+    }
 
 }
