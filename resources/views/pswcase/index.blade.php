@@ -99,7 +99,7 @@
                                             </tr>    
                                             @endforeach
                                         @else 
-                                        <tr><td>Not Found</td></tr>    
+                                        <tr><td></td><td style="color: red; text-align: center;">Not Found</td></tr>    
                                         @endif
                                     </tbody>
                                 </table>
