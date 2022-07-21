@@ -74,7 +74,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @if(count($data_pswip) > 1)
+                                        @if(count($data_pswip) > 0)
                                             @foreach($data_pswip ?? '' as $num=> $pswip)
                                             <tr class="align-right">
                                                 <td>{{++$num}}</td>

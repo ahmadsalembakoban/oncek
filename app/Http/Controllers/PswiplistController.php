@@ -50,9 +50,10 @@ class PswiplistController extends Controller
     }
 
     public function delete($id) {
-        $data_pswip = Iplist::find($id);
-        $data_pswip->delete();
-        return redirect('/pswiplist')->with('sukses', 'Data Deleted');
+        // $data_pswip = Iplist::find($id);
+        print($data_pswip);
+        // $data_pswip->delete();
+        // return redirect('/pswiplist')->with('sukses', 'Data Deleted');
     }
 
 }

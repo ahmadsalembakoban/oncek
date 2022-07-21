@@ -53,6 +53,7 @@ class PswcaseController extends Controller
 
     public function delete($id) {
         $data_pswcase = Pswcase::find($id);
+        // print($data_pswcase);
         $data_pswcase->delete();
         return redirect('/pswcase')->with('sukses', 'Data Deleted');
     }

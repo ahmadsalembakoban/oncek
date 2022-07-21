@@ -29,13 +29,14 @@ Route::get('/logout', 'AuthController@logout');
 
 Route::group(['middleware' => 'auth', 'prevent-back-history'], function() {
     Route::get('/dashboard', 'DashboardController@index');  
+    
     Route::get('/pswcase', 'PswcaseController@index');
     Route::post('/pswcase/create', 'PswcaseController@create');
     Route::get('/pswcase/{id}/edit', 'PswcaseController@edit');
     Route::post('/pswcase/{id}/update', 'PswcaseController@update');
     Route::get('/pswcase/{id}/delete', 'PswcaseController@delete');
     Route::get('/pswcase/{id}/case', 'PswcaseController@case');
-    // pswiplist
+    
     Route::get('/pswiplist', 'PswiplistController@index');
     Route::post('/pswiplist/create', 'PswiplistController@create');
     Route::get('/pswiplist/{id}/edit', 'PswiplistController@edit');
