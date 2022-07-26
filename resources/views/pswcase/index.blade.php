@@ -103,6 +103,9 @@
                                         @endif
                                     </tbody>
                                 </table>
+
+                                {!! $data_pswcase->links() !!}
+
                             <!--  -->
                         </div>
                     </div>
@@ -110,7 +113,6 @@
             </div>
         </div>
     </div>
-
     
 @stop
 

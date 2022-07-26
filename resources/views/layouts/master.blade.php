@@ -20,6 +20,9 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin/assets/img/apple-icon.png')}}">
 	<link rel="icon" type="image/png" sizes="96x96" href="{{asset('admin/assets/img/favicon.png')}}">
+	<!-- DATATABLES JQUERY -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
 </head>
 
 <body>
@@ -45,6 +48,8 @@
 	<!-- <script src="{{asset('admin/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js')}}"></script>
 	<script src="{{asset('admin/assets/vendor/chartist/js/chartist.min.js')}}"></script> -->
 	<script src="{{asset('admin/assets/scripts/klorofil-common.js')}}"></script>
+	<!-- DataTables Jquery -->
+	<script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
 	
 	
 </body>

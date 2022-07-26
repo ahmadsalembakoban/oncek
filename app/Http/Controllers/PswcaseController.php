@@ -10,20 +10,19 @@ use Carbon\Carbon;
 class PswcaseController extends Controller
 {
     public function index(Request $request) {
-        $data_pswcase = DB::table('pswcase')->paginate(3);
+        // $data_pswcase = Pswcase::paginate();
 
         if($request->has('cari')) {
             $data_pswcase = Pswcase::where('psw_problem',  'LIKE', '%'.$request->cari.'%')
                                     ->orwhere('psw_action',  'LIKE', '%'.$request->cari.'%')
                                     ->orwhere('info',  'LIKE', '%'.$request->cari.'%')
-                                    ->get();
+                                    ->paginate();
         } else {
-            // $data_pswcase = Pswcase::all();
-            $data_pswcase = DB::table('pswcase')->paginate(3);     
+            // $data_pswcase = DB::table('pswcase')->paginate(6);
+            return view('pswcase.index', ['data_pswcase' => Pswcase::Paginate(6)]);     
         }
-        
+        // return view('pswcase.index', ['data_pswcase' => Pswcase::Paginate(6)]);
         return view('pswcase.index', ['data_pswcase' => $data_pswcase]);
-        // return view('pswcase.index', ['data_pswcase' => Pswcase::simplePaginate(3)]);
     }
 
     public function create(Request $request) {

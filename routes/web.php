@@ -37,7 +37,7 @@ Route::group(['middleware' => 'auth', 'prevent-back-history'], function() {
     Route::get('/pswcase/{id}/delete', 'PswcaseController@delete');
     Route::get('/pswcase/{id}/case', 'PswcaseController@case');
     
-    Route::get('/pswiplist', 'PswiplistController@index');
+    Route::get('/pswiplist', 'PswiplistController@index')->name('pswcase');
     Route::post('/pswiplist/create', 'PswiplistController@create');
     Route::get('/pswiplist/{id}/edit', 'PswiplistController@edit');
     Route::post('/pswiplist/{id}/update', 'PswiplistController@update');
