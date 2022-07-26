@@ -81,7 +81,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Case</th>
-                                            <th>Date</th>
+                                            <th>Dates</th>
                                             <th></th>
                                         </tr>
                                     </thead>
