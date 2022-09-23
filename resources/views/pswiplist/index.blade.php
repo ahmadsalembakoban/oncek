@@ -82,7 +82,7 @@
                                                 <td>{{$pswip->psw_ip}}</td>
                                                 <td>
                                                     <a href="/pswiplist/{{$pswip->id}}/edit" class="btn btn-dark btn-sm" style="margin-bottom: 5px;"> Edit</a>
-                                                    <a href="/pswiplist/{{$pswip->id}/delete}" class="btn btn-danger btn-sm" onclick="return confirm('data delete?')" style="margin-bottom: 5px;"> Delete</a>
+                                                    <a href="/pswiplist/{{$pswip->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('data delete?')" style="margin-bottom: 5px;"> Delete</a>
                                                 </td>
                                             </tr>
                                             @endforeach
