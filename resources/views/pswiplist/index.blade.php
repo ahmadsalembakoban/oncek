@@ -15,7 +15,7 @@
                         </div>                    
                     @endif
                     <!--  -->
-                    <div class="col-md-12">
+                    <div class="col-md-12"> 
                         <div class="panel">
                             <div class="panel-heading">
                                 <div class="navbar-right">
@@ -91,6 +91,8 @@
                                         @endif        
                                     </tbody>
                                 </table>
+
+                                {!! $data_pswip->links() !!}
                             </div>
                         </div>
                     </div>

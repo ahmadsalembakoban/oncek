@@ -12,14 +12,14 @@ use Carbon\Carbon;
 class PswiplistController extends Controller
 {
     public function index(Request $request) {
-        $data_pswip = DB::table('iplist')->paginate(3);
+        // $data_pswip = DB::table('iplist')->paginate(10);
         
         if($request->has('cari')) {
             $data_pswip = Iplist::where('psw_servername', 'LIKE', '%'.$request->cari.'%')
                                   ->orwhere('psw_ip', 'LIKE', '%'.$request->cari.'%')
-                                  ->get();
+                                  ->paginate(10);
         } else {
-            $data_pswip = DB::table('iplist')->paginate(3);
+            $data_pswip = DB::table('iplist')->paginate(10);
         }
 
         return view('pswiplist.index', ['data_pswip' => $data_pswip]); 
@@ -50,10 +50,10 @@ class PswiplistController extends Controller
     }
 
     public function delete($id) {
-        // $data_pswip = Iplist::find($id);
-        print($data_pswip);
-        // $data_pswip->delete();
-        // return redirect('/pswiplist')->with('sukses', 'Data Deleted');
+        $data_pswip = Iplist::find($id);
+        // print($data_pswip);
+        $data_pswip->delete();
+        return redirect('/pswiplist')->with('sukses', 'Data Deleted');
     }
 
 }

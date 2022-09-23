@@ -15,6 +15,7 @@ use App\Http\Controllers\AuthController;
 |
 */
 
+
 Route::get('/', function () {
     return view('auths.login');
 });
@@ -27,20 +28,27 @@ Route::post('/postlogin', 'AuthController@postlogin');
 Route::get('/logout', 'AuthController@logout');
 // Route::get('/logout', [AuthController::class, 'logout']);
 
-Route::group(['middleware' => 'auth', 'prevent-back-history'], function() {
-    Route::get('/dashboard', 'DashboardController@index');  
+
+      
+    Route::group(['middleware' => 'auth' ], function() {
+        Route::get('/dashboard', 'DashboardController@index');  
+        
+        Route::get('/pswcase', 'PswcaseController@index');  
+        Route::post('/pswcase/create', 'PswcaseController@create');
+        Route::get('/pswcase/{id}/edit', 'PswcaseController@edit');
+        Route::post('/pswcase/{id}/update', 'PswcaseController@update');
+        Route::get('/pswcase/{id}/delete', 'PswcaseController@delete');
+        Route::get('/pswcase/{id}/case', 'PswcaseController@case');
+        
+        Route::get('/pswiplist', 'PswiplistController@index');
+        Route::post('/pswiplist/create', 'PswiplistController@create');
+        Route::get('/pswiplist/{id}/edit', 'PswiplistController@edit');
+        Route::post('/pswiplist/{id}/update', 'PswiplistController@update');
+        Route::get('/pswiplist/{id}/delete', 'PswiplistController@delete');
     
-    Route::get('/pswcase', 'PswcaseController@index');
-    Route::post('/pswcase/create', 'PswcaseController@create');
-    Route::get('/pswcase/{id}/edit', 'PswcaseController@edit');
-    Route::post('/pswcase/{id}/update', 'PswcaseController@update');
-    Route::get('/pswcase/{id}/delete', 'PswcaseController@delete');
-    Route::get('/pswcase/{id}/case', 'PswcaseController@case');
+        Route::get('/reff', function() {
+            return view('layouts.reff');
+        });
     
-    Route::get('/pswiplist', 'PswiplistController@index')->name('pswcase');
-    Route::post('/pswiplist/create', 'PswiplistController@create');
-    Route::get('/pswiplist/{id}/edit', 'PswiplistController@edit');
-    Route::post('/pswiplist/{id}/update', 'PswiplistController@update');
-    Route::get('/pswiplist/{id}/delete', 'PswiplistController@delete');
-    
-});
+    });    
+

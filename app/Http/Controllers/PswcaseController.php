@@ -16,10 +16,10 @@ class PswcaseController extends Controller
             $data_pswcase = Pswcase::where('psw_problem',  'LIKE', '%'.$request->cari.'%')
                                     ->orwhere('psw_action',  'LIKE', '%'.$request->cari.'%')
                                     ->orwhere('info',  'LIKE', '%'.$request->cari.'%')
-                                    ->paginate();
+                                    ->paginate(10);
         } else {
             // $data_pswcase = DB::table('pswcase')->paginate(6);
-            return view('pswcase.index', ['data_pswcase' => Pswcase::Paginate(6)]);     
+            return view('pswcase.index', ['data_pswcase' => Pswcase::Paginate(10)]);     
         }
         // return view('pswcase.index', ['data_pswcase' => Pswcase::Paginate(6)]);
         return view('pswcase.index', ['data_pswcase' => $data_pswcase]);
